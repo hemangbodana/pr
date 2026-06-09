@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Babyraj Foundation</title>
+    <meta name="description"
+        content="Get in touch with Babyraj Foundation. Located in Nathdwara, Rajasthan. Report emergencies, volunteer, or partner with us.">    
+    <link rel="stylesheet" href="css/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        .page-hero {
+            position: relative;
+            height: 50vh;
+            min-height: 350px;
+            margin-top: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #5CB8A0 100%);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.7), rgba(92, 184, 160, 0.5));
+        }
+
+        .page-hero .container {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: white;
+        }
+
+        .page-hero .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .page-hero .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            opacity: 0.95;
+        }
+
+        .contact-section {
+            padding: 6rem 0;
+            background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 420px 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 107, 53, 0.1);
+            position: sticky;
+            top: 100px;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 2.5rem;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2a2a2a;
+            background: linear-gradient(135deg, #FF6B35, #5CB8A0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), rgba(92, 184, 160, 0.05));
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .info-item:hover {
+            transform: translateX(5px);
+            border-color: rgba(255, 107, 53, 0.2);
+            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.1);
+        }
+
+        .info-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #FF6B35, #F7931E);
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .info-item h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2a2a2a;
+        }
+
+        .info-item p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .social-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid rgba(255, 107, 53, 0.1);
+        }
+
+        .social-section h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2a2a2a;
+        }
+
+        .social-section .social-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .social-section .social-link {
+            color: #2a2a2a;
+            transition: all 0.3s ease;
+            padding: 0.75rem;
+            background: rgba(255, 107, 53, 0.05);
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 500;
+            border: 1px solid transparent;
+        }
+
+        .social-section .social-link:hover {
+            background: linear-gradient(135deg, #FF6B35, #F7931E);
+            color: white;
+            transform: scale(1.05);
+            border-color: #FF6B35;
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .contact-form-wrapper {
+            background: white;
+            padding: 4rem;
+            border-radius: 24px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 107, 53, 0.1);
+        }
+
+        .contact-form-wrapper h3 {
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2a2a2a;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1.5rem;
+        }
+
+        .contact-form-wrapper h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #FF6B35, #5CB8A0);
+            border-radius: 2px;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            color: #2a2a2a;
+            font-size: 1.05rem;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+            background: #fafafa;
+        }
+
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #FF6B35;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .contact-form .btn-block {
+            width: 100%;
+            padding: 1.25rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            background: linear-gradient(135deg, #FF6B35, #F7931E);
+            border: none;
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            color: white;
+            border-radius: 12px;
+        }
+
+        .contact-form .btn-block:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 107, 53, 0.4);
+        }
+
+        @media (max-width: 1024px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .contact-info {
+                position: relative;
+                top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-hero .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .contact-form-wrapper {
+                padding: 2.5rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <!-- <img src="images/logo.png" alt="Logo" class="logo-img"> -->
+                    <span class="logo-text">Babyraj Foundation</span>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="programs.html" class="nav-link">Our Work</a></li>
+                        <li><a href="donate.html" class="nav-link">Donate</a></li>
+                        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="btn btn-primary btn-donate-header" onclick="window.location.href='donate.html'">Donate
+                    Now</button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1 class="hero-title">Get in Touch</h1>
+            <p class="hero-subtitle">We're here to help animals and answer your questions</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Reach Out to Us</h2>
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>Nathdwara<br>Rajsamand District, Rajasthan, India</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>24/7 Emergency: +91 98765 43210<br>Office: +91 98765 43210</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📧</div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>General: info@radhekunjgaushala.org<br>Emergency: emergency@radhekunjgaushala.org</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">⏰</div>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Office: Mon-Sat, 9AM-6PM<br>Emergency: 24/7</p>
+                        </div>
+                    </div>
+                    <div class="social-section">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link">📘 Facebook</a>
+                            <a href="#" class="social-link">📷 Instagram</a>
+                            <a href="#" class="social-link">🐦 Twitter</a>
+                            <a href="#" class="social-link">▶️ YouTube</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h3>Send Us a Message</h3>
+                    <form class="contact-form" action="mailto:info@radhekunjgaushala.org" method="POST" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="Name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="Email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="Phone" placeholder="+91 98765 43210">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="Subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="emergency">🚨 Emergency Animal Rescue</option>
+                                <option value="adoption">🏠 Adoption Inquiry</option>
+                                <option value="volunteer">🤝 Volunteer Registration</option>
+                                <option value="donation">💰 Donation Query</option>
+                                <option value="csr">🏢 CSR Partnership</option>
+                                <option value="general">💬 General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="Message" rows="5" placeholder="Tell us how we can help..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Babyraj Foundation. CIN: U85500RJ2024NPL096593</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

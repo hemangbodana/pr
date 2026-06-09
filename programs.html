@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work & Programs - Babyraj Foundation</title>
+    <meta name="description"
+        content="Explore the various programs and initiatives by Babyraj Foundation, including rescue operations, gaushala construction, and sewa packages.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        .page-hero {
+            position: relative;
+            height: 50vh;
+            min-height: 400px;
+            margin-top: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #5CB8A0 100%);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .page-hero .container {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: white;
+        }
+
+        .page-hero .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .program-section {
+            padding: 5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2a2a2a;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Impact Grid */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 5rem;
+        }
+
+        .impact-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .impact-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .impact-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .impact-content {
+            padding: 2rem;
+        }
+
+        .impact-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #FF6B35;
+        }
+
+        .impact-content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Sewa Packages Grid */
+        .sewa-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            background: #FFF8F3;
+            padding: 4rem 2rem;
+            border-radius: 30px;
+        }
+
+        .sewa-card {
+            background: #FFB347; /* Matching the orange-yellow theme from image */
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            color: #2a2a2a;
+        }
+
+        .sewa-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .sewa-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .sewa-card p {
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .sewa-card .read-more {
+            color: #8B0000;
+            text-decoration: none;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .btn-sewa {
+            background: #8B0000;
+            color: white;
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 8px;
+            border: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-sewa:hover {
+            background: #a00000;
+        }
+
+        @media (max-width: 768px) {
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-text">Babyraj Foundation</span>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="programs.html" class="nav-link active">Our Work</a></li>
+                        <li><a href="donate.html" class="nav-link">Donate</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="btn btn-primary btn-donate-header" onclick="window.location.href='donate.html'">Donate Now</button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1 class="hero-title">Our Work & Programs</h1>
+            <p class="hero-subtitle">Transforming lives through compassion and dedicated action</p>
+        </div>
+    </section>
+
+    <!-- Key Initiatives -->
+    <section class="program-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Core Initiatives</h2>
+                <p class="section-subtitle">Under the leadership of Praveen Singh Chouhan, Babyraj Foundation has pioneered several life-saving programs.</p>
+            </div>
+
+            <div class="impact-grid">
+                <!-- Rescue Operations -->
+                <div class="impact-card">
+                    <img src="images/WhatsApp Image 2026-02-01 at 9.28.26 AM.jpeg" alt="Rescue Operations" class="impact-image">
+                    <div class="impact-content">
+                        <h3>Rescue Operations</h3>
+                        <p>Praveen Singh Chouhan has led countless rescue missions, saving street animals from accidents, abuse, and life-threatening conditions. Our emergency response team works 24/7 to ensure no call for help goes unanswered.</p>
+                    </div>
+                </div>
+
+                <!-- Three Gaushalas -->
+                <div class="impact-card">
+                    <img src="images/WhatsApp Image 2026-02-01 at 9.35.56 AM.jpeg" alt="Gaushala Construction" class="impact-image">
+                    <div class="impact-content">
+                        <h3>Establishing Three Gaushalas</h3>
+                        <p>We have successfully established and are operating three state-of-the-art Gaushalas in Rajasthan. These facilities provide a safe haven, nutritious food, and specialized medical care for over 1,000 cows and bulls.</p>
+                    </div>
+                </div>
+
+                <!-- Orphan Care -->
+                <div class="impact-card">
+                    <img src="images/WhatsApp Image 2026-02-01 at 9.35.55 AM.jpeg" alt="Orphan Care" class="impact-image">
+                    <div class="impact-content">
+                        <h3>Care for the Orphans</h3>
+                        <p>Beyond animal welfare, we are deeply committed to supporting orphaned children. We provide educational resources, clothing, and essential supplies to ensure they have the foundation for a bright future.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sewa Packages -->
+    <section class="program-section" style="background: #fff;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sewa Packages</h2>
+                <p class="section-subtitle">Choose a way to contribute and make a direct impact on the lives of our rescued animals.</p>
+            </div>
+
+            <div class="sewa-grid">
+                <!-- Monthly Care -->
+                <div class="sewa-card">
+                    <h3>Monthly Care</h3>
+                    <img src="images/cow_rescue.jpg" alt="Monthly Care" class="sewa-image">
+                    <p>Babyraj Foundation provides shelter for destitute cows and bulls, often rescued from dire situations. Your support ensures their ongoing care.</p>
+                    <a href="donate.html" class="read-more">Read more</a>
+                    <button class="btn-sewa" onclick="window.location.href='donate.html'">🛒 Add Items to donate</button>
+                </div>
+
+                <!-- Feed Cows -->
+                <div class="sewa-card">
+                    <h3>Feed Cows</h3>
+                    <img src="images/campaign_1.jpg" alt="Feed Cows" class="sewa-image">
+                    <p>We feed our gauvansh a variety of fodder types. Select specific fodder packages to help nourish our rescued residents.</p>
+                    <a href="donate.html" class="read-more">Read more</a>
+                    <button class="btn-sewa" onclick="window.location.href='donate.html'">🛒 Add Items to donate</button>
+                </div>
+
+                <!-- Medical Seva -->
+                <div class="sewa-card">
+                    <h3>Medical Seva</h3>
+                    <img src="images/WhatsApp Image 2026-02-01 at 9.35.58 AM.jpeg" alt="Medical Seva" class="sewa-image">
+                    <p>We primarily shelter elderly and destitute gauvansh rescued from various conditions. This fund covers their immediate medical needs.</p>
+                    <a href="donate.html" class="read-more">Read more</a>
+                    <button class="btn-sewa" onclick="window.location.href='donate.html'">🛒 Add Items to donate</button>
+                </div>
+
+                <!-- Construction -->
+                <div class="sewa-card">
+                    <h3>Construction</h3>
+                    <img src="images/campaign_3.jpg" alt="Construction" class="sewa-image">
+                    <p>Support the expansion and maintenance of our Gaushala facilities. Your contribution helps build stronger shelters for more animals.</p>
+                    <a href="donate.html" class="read-more">Read more</a>
+                    <button class="btn-sewa" onclick="window.location.href='donate.html'">🛒 Add Items to donate</button>
+                </div>
+
+                <!-- Pehli Roti -->
+                <div class="sewa-card">
+                    <h3>Pehli Roti</h3>
+                    <img src="images/WhatsApp Image 2026-02-01 at 9.35.59 AM.jpeg" alt="Pehli Roti" class="sewa-image">
+                    <p>Reviving the tradition of offering the first roti to cows. This small gesture contributes significantly to their daily sustenance.</p>
+                    <a href="donate.html" class="read-more">Read more</a>
+                    <button class="btn-sewa" onclick="window.location.href='donate.html'">🛒 Add Items to donate</button>
+                </div>
+
+                <!-- Monthly Medical Seva -->
+                <div class="sewa-card">
+                    <h3>Monthly Medical Seva</h3>
+                    <img src="images/WhatsApp Image 2026-02-01 at 9.35.57 AM.jpeg" alt="Monthly Medical Seva" class="sewa-image">
+                    <p>Continuous medical support for animals with chronic conditions. Your monthly commitment ensures they live a pain-free life.</p>
+                    <a href="donate.html" class="read-more">Read more</a>
+                    <button class="btn-sewa" onclick="window.location.href='donate.html'">🛒 Add Items to donate</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="program-section" style="text-align: center; background: linear-gradient(135deg, #FF6B35, #5CB8A0); color: white;">
+        <div class="container">
+            <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1.5rem;">Join Our Mission</h2>
+            <p style="font-size: 1.25rem; margin-bottom: 2.5rem; opacity: 0.9;">Your support enables us to continue these vital programs and reach more animals and people in need.</p>
+            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+                <a href="donate.html" class="btn btn-primary" style="background: white; color: #FF6B35; border: none;">Donate Now</a>
+                <a href="contact.html" class="btn btn-secondary" style="border-color: white; color: white;">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Babyraj Foundation. All rights reserved. CIN: U85500RJ2024NPL096593</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

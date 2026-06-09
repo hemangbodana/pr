@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Babyraj Foundation</title>
+    <meta name="description"
+        content="Support our mission to rescue and care for animals. Every donation helps save lives. Tax benefits under 80G available.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/donate.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <!-- <img src="images/logo.png" alt="AnimalCare Foundation Logo" class="logo-img"> -->
+                    <span class="logo-text">Babyraj Foundation</span>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li><a href="programs.html" class="nav-link">Our Work</a></li>
+                        <li><a href="donate.html" class="nav-link active">Donate</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="btn btn-primary btn-donate-header">Donate Now</button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="donate-hero">
+        <div class="container">
+            <h1 class="hero-title">Support a Life Today</h1>
+            <p class="hero-subtitle">Your contribution helps us rescue, treat, and rehabilitate animals in need</p>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="donation-section">
+        <div class="container">
+            <div class="donation-grid">
+                <!-- Donation Form -->
+                <div class="donation-form-wrapper">
+                    <div class="form-header">
+                        <h2>Make a Donation</h2>
+                        <div class="donation-type-toggle">
+                            <button class="toggle-btn active" data-type="one-time">One-Time</button>
+                            <button class="toggle-btn" data-type="monthly">Monthly</button>
+                        </div>
+                    </div>
+
+                    <form class="donation-form" id="donationForm">
+                        <!-- Cause Selector -->
+                        <div class="form-group">
+                            <label for="cause">Select Cause</label>
+                            <select id="cause" name="cause" required>
+                                <option value="">Choose where to donate</option>
+                                <option value="general">General Fund - Where Needed Most</option>
+                                <option value="cow-rescue">Cow Rescue & Rehabilitation</option>
+                                <option value="dog-shelter">Dog Shelter & Care</option>
+                                <option value="medical">Medical Treatment Fund</option>
+                                <option value="winter">Winter Shelter Drive</option>
+                                <option value="emergency">Emergency Response</option>
+                                <option value="shelter-construction">New Shelter Construction</option>
+                            </select>
+                        </div>
+
+                        <!-- Amount Selection -->
+                        <div class="form-group">
+                            <label>Donation Amount (₹)</label>
+                            <div class="amount-buttons">
+                                <button type="button" class="amount-btn" data-amount="500">₹500</button>
+                                <button type="button" class="amount-btn" data-amount="1000">₹1,000</button>
+                                <button type="button" class="amount-btn" data-amount="2500">₹2,500</button>
+                                <button type="button" class="amount-btn" data-amount="5000">₹5,000</button>
+                                <button type="button" class="amount-btn" data-amount="10000">₹10,000</button>
+                                <button type="button" class="amount-btn active" data-amount="custom">Custom</button>
+                            </div>
+                            <input type="number" id="customAmount" name="amount" placeholder="Enter custom amount"
+                                min="100" required>
+                        </div>
+
+                        <!-- Impact Calculator -->
+                        <div class="impact-calculator">
+                            <p class="impact-text">
+                                <strong>Your Impact:</strong>
+                                <span id="impactText">Enter an amount to see your impact</span>
+                            </p>
+                        </div>
+
+                        <!-- Personal Details -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pan">PAN Number (for 80G certificate)</label>
+                                <input type="text" id="pan" name="pan" placeholder="Optional">
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-group">
+                            <label for="message">Message (Optional)</label>
+                            <textarea id="message" name="message" rows="3"
+                                placeholder="Share why you're supporting us..."></textarea>
+                        </div>
+
+                        <!-- Tax Benefit Info -->
+                        <div class="tax-info">
+                            <p>✓ Get 50% tax exemption under Section 80G</p>
+                            <p>✓ Receive instant donation receipt via email</p>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">
+                            Proceed to Secure Payment
+                        </button>
+
+                        <!-- Trust Badges -->
+                        <div class="payment-security">
+                            <p>🔒 Secured by 256-bit SSL Encryption</p>
+                            <div class="payment-methods">
+                                <span>💳 Card</span>
+                                <span>📱 UPI</span>
+                                <span>🏦 Net Banking</span>
+                                <span>👛 Wallet</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Donation Info Sidebar -->
+                <div class="donation-sidebar">
+                    <div class="cause-card">
+                        <img src="website images/IMG_5501.jpg"
+                            alt="Donate to save animals" class="cause-image">
+                        <div class="cause-content">
+                            <h3 id="causeTitle">General Fund</h3>
+                            <p id="causeDescription">
+                                Your donation will be used where it's needed most - from emergency rescues to daily
+                                care, medical treatments to shelter maintenance. Every rupee makes a difference.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Impact Per Rupee -->
+                    <div class="impact-breakdown">
+                        <h4>How Your Money Helps</h4>
+                        <div class="impact-item">
+                            <span class="impact-amount">₹500</span>
+                            <span class="impact-desc">= Food for 5 animals for 1 day</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-amount">₹1,000</span>
+                            <span class="impact-desc">= Basic medical checkup for 1 animal</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-amount">₹2,500</span>
+                            <span class="impact-desc">= Vaccination for 10 animals</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-amount">₹5,000</span>
+                            <span class="impact-desc">= Emergency surgery for 1 animal</span>
+                        </div>
+                        <div class="impact-item">
+                            <span class="impact-amount">₹10,000</span>
+                            <span class="impact-desc">= Full month care for 1 animal</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial -->
+                    <div class="donor-testimonial">
+                        <p class="testimonial-text">"Seeing the rescued animals recover and find loving homes makes
+                            every donation worthwhile. This organization truly makes a difference."</p>
+                        <p class="testimonial-author">- Priya Sharma, Monthly Donor</p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="quick-actions">
+                        <a href="transparency.html" class="action-link">📊 View Financial Reports</a>
+                        <a href="gallery.html" class="action-link">📸 See Our Work</a>
+                        <a href="contact.html" class="action-link">📞 Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Ways to Help -->
+    <section class="other-ways">
+        <div class="container">
+            <h2 class="section-title">Other Ways to Help</h2>
+            <div class="ways-grid">
+                <div class="way-card">
+                    <div class="way-icon">🤝</div>
+                    <h3>Volunteer</h3>
+                    <p>Join our team and help hands-on with animal care</p>
+                    <a href="contact.html#volunteer" class="btn btn-outline">Learn More</a>
+                </div>
+                <div class="way-card">
+                    <div class="way-icon">🏢</div>
+                    <h3>Corporate Partnership</h3>
+                    <p>Partner with us under CSR initiatives</p>
+                    <a href="contact.html#csr" class="btn btn-outline">Get in Touch</a>
+                </div>
+                <div class="way-card">
+                    <div class="way-icon">🎁</div>
+                    <h3>In-Kind Donations</h3>
+                    <p>Donate supplies, food, or medical equipment</p>
+                    <a href="contact.html#inkind" class="btn btn-outline">Donate Items</a>
+                </div>
+                <div class="way-card">
+                    <div class="way-icon">📢</div>
+                    <h3>Spread the Word</h3>
+                    <p>Share our mission on social media</p>
+                    <a href="#" class="btn btn-outline">Share Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Modal (Hidden by default) -->
+    <div class="payment-modal" id="paymentModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">✕</button>
+            <h2>Complete Your Donation</h2>
+            <div class="donation-summary">
+                <p><strong>Amount:</strong> <span id="modalAmount">₹0</span></p>
+                <p><strong>Cause:</strong> <span id="modalCause">General Fund</span></p>
+                <p><strong>Type:</strong> <span id="modalType">One-Time</span></p>
+            </div>
+
+            <div class="payment-options">
+                <h3>Select Payment Method</h3>
+                <div class="payment-tabs">
+                    <button class="payment-tab active" data-method="upi">UPI</button>
+                    <button class="payment-tab" data-method="card">Card</button>
+                    <button class="payment-tab" data-method="netbanking">Net Banking</button>
+                    <button class="payment-tab" data-method="wallet">Wallet</button>
+                </div>
+
+                <div class="payment-form-wrapper">
+                    <!-- UPI Form -->
+                    <div class="payment-form active" id="upi-form">
+                        <input type="text" placeholder="Enter UPI ID (example@upi)" class="payment-input">
+                        <button class="btn btn-primary btn-block">Pay with UPI</button>
+                    </div>
+
+                    <!-- Card Form -->
+                    <div class="payment-form" id="card-form">
+                        <input type="text" placeholder="Card Number" class="payment-input">
+                        <div class="form-row">
+                            <input type="text" placeholder="MM/YY" class="payment-input">
+                            <input type="text" placeholder="CVV" class="payment-input">
+                        </div>
+                        <input type="text" placeholder="Cardholder Name" class="payment-input">
+                        <button class="btn btn-primary btn-block">Pay Securely</button>
+                    </div>
+
+                    <!-- Net Banking Form -->
+                    <div class="payment-form" id="netbanking-form">
+                        <select class="payment-input">
+                            <option>Select Your Bank</option>
+                            <option>State Bank of India</option>
+                            <option>HDFC Bank</option>
+                            <option>ICICI Bank</option>
+                            <option>Axis Bank</option>
+                            <option>Punjab National Bank</option>
+                        </select>
+                        <button class="btn btn-primary btn-block">Proceed to Bank</button>
+                    </div>
+
+                    <!-- Wallet Form -->
+                    <div class="payment-form" id="wallet-form">
+                        <div class="wallet-options">
+                            <button class="wallet-btn">Paytm</button>
+                            <button class="wallet-btn">PhonePe</button>
+                            <button class="wallet-btn">Google Pay</button>
+                            <button class="wallet-btn">Amazon Pay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-title">Babyraj Foundation</h3>
+                    <p class="footer-text">Dedicated to rescuing, rehabilitating, and caring for animals in need.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">▶️</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Our Work</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="transparency.html">Transparency</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="programs.html#cow-rescue">Cow Rescue</a></li>
+                        <li><a href="programs.html#dog-shelter">Dog Shelter</a></li>
+                        <li><a href="programs.html#medical">Medical Treatment</a></li>
+                        <li><a href="programs.html#adoption">Adoption</a></li>
+                        <li><a href="programs.html#emergency">Emergency Response</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li>📍 Nathdwara, Rajsamand District, Rajasthan, India</li>
+                        <li>📞 +91 98765 43210</li>
+                        <li>📧 info@radhekunjgaushala.org</li>
+                        <li>⏰ Mon-Sun: 24/7 Emergency</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Certifications</h4>
+                    <ul class="footer-links">
+                        <li><a href="transparency.html#registration">NGO Registration</a></li>
+                        <li><a href="transparency.html#80g">80G Certificate</a></li>
+                        <li><a href="transparency.html#csr">CSR Compliance</a></li>
+                        <li><a href="transparency.html#reports">Annual Reports</a></li>
+                        <li><a href="transparency.html#audit">Audit Reports</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Babyraj Foundation. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/donate.js"></script>
+</body>
+
+</html>
