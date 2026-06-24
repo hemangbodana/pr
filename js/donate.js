@@ -181,7 +181,7 @@ donationForm.addEventListener('submit', async (e) => {
 
         // 2. Open Razorpay Checkout
         const options = {
-            key: 'rzp_test_your_id', // This should ideally be fetched from backend or injected
+            key: 'rzp_test_T5SpXC3Gnb4UyC', // This should ideally be fetched from backend or injected
             amount: order.amount,
             currency: order.currency,
             name: 'Babyraj Foundation',
